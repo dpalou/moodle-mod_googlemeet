@@ -68,7 +68,8 @@ class mobile {
             'url' => $googlemeet->url,
             'cmid' => $cm->id,
             'upcomingevent' => googlemeet_get_upcoming_events($googlemeet->id),
-            'recording' => ['hasrecordings' => $hasrecordings, 'recordings' => $recordings]
+            'recording' => ['hasrecordings' => $hasrecordings, 'recordings' => $recordings],
+            'canusemoduleinfo' => $args->appversioncode >= 44000,
         ];
 
         // Completion and trigger events.
